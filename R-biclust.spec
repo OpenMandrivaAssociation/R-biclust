@@ -1,24 +1,23 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  biclust
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.0.1
-Release:          1
+Release:          2
 Summary:          BiCluster Algorithms
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
-Requires:         R-MASS R-grid R-colorspace R-lattice 
-Requires:         R-methods 
+Requires:         R-MASS R-grid R-colorspace R-lattice R-methods
 %if %{without bootstrap}
 Requires:         R-flexclust R-isa2 
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-MASS R-grid R-colorspace R-lattice
-BuildRequires:    R-methods 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-MASS
+BuildRequires:    R-grid R-colorspace R-lattice R-methods
 %if %{without bootstrap}
-BuildRequires:    R-flexclust R-isa2 
+BuildRequires:    R-flexclust R-isa2
 %endif
 
 %description
