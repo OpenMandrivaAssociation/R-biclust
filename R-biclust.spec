@@ -1,15 +1,15 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 %global packname  biclust
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.0.1
-Release:          2
+Version:          1.0.2
+Release:          1
 Summary:          BiCluster Algorithms
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/biclust_1.0.2.tar.gz
 Requires:         R-MASS R-grid R-colorspace R-lattice R-methods
 %if %{without bootstrap}
 Requires:         R-flexclust R-isa2 
@@ -55,3 +55,16 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+
+
+%changelog
+* Wed Feb 22 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.1-2
++ Revision: 778956
+- Rebuild with proper dependencies
+
+* Mon Feb 20 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.1-1
++ Revision: 777858
+- Import R-biclust
+- Import R-biclust
+
+
