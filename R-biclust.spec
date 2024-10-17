@@ -8,7 +8,7 @@ Release:          2
 Summary:          BiCluster Algorithms
 Group:            Sciences/Mathematics
 License:          GPL-2
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/biclust_1.0.2.tar.gz
 Requires:         R-MASS R-grid R-colorspace R-lattice R-methods
 %if %{without bootstrap}
